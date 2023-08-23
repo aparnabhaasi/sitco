@@ -4,3 +4,13 @@
 .navbar-toggler-icon {
   background-color: white;
 }
+/* Navbar.css */
+.navbar-logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo img {
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+

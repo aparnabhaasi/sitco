@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 22, 2023 at 06:11 AM
+-- Generation Time: Aug 23, 2023 at 09:56 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -77,7 +77,6 @@ CREATE TABLE `about_gallery` (
 --
 
 INSERT INTO `about_gallery` (`id`, `title`, `image`) VALUES
-(19, 'Construction', 'jeffrey-blum-7-gaPkhIgqs-unsplash.jpg'),
 (20, 'Construction', 'b.jpg'),
 (21, 'Construction', 'c.jpg');
 
@@ -98,7 +97,6 @@ CREATE TABLE `about_project` (
 --
 
 INSERT INTO `about_project` (`id`, `title`, `image`) VALUES
-(17, 'Construction', 'a.jpg'),
 (18, 'Construction', 'b.jpg'),
 (19, 'Construction', 'c.jpg');
 
@@ -137,6 +135,7 @@ CREATE TABLE `career` (
   `title` varchar(250) NOT NULL,
   `location` varchar(250) NOT NULL,
   `experience` varchar(250) NOT NULL,
+  `qualification` varchar(250) NOT NULL,
   `salary` varchar(150) NOT NULL,
   `description` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -145,8 +144,8 @@ CREATE TABLE `career` (
 -- Dumping data for table `career`
 --
 
-INSERT INTO `career` (`c_id`, `title`, `location`, `experience`, `salary`, `description`) VALUES
-(2, 'Architect', 'Kochi', '0-1', '18000', 'Passionate architect');
+INSERT INTO `career` (`c_id`, `title`, `location`, `experience`, `qualification`, `salary`, `description`) VALUES
+(7, 'Jr Architect', 'Kochi', '0-1', 'B.tech', '20000', 'work under the direct supervision of an Architect or Lead Designer, helping to prepare designs, complete construction documents, write up building plans, and assist in the presentation of materials');
 
 -- --------------------------------------------------------
 
@@ -160,43 +159,46 @@ CREATE TABLE `job_apply` (
   `fname` varchar(250) NOT NULL,
   `lname` varchar(250) NOT NULL,
   `email` varchar(250) NOT NULL,
-  `mobile` int(150) NOT NULL,
+  `mobile` varchar(150) NOT NULL,
   `position` varchar(250) NOT NULL,
   `start_date` date NOT NULL,
   `status` varchar(250) NOT NULL,
   `exp` varchar(250) NOT NULL,
   `resume` text NOT NULL,
-  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+  `date` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `qualification` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `job_apply`
 --
 
-INSERT INTO `job_apply` (`apply_id`, `c_id`, `fname`, `lname`, `email`, `mobile`, `position`, `start_date`, `status`, `exp`, `resume`, `date`) VALUES
-(1, 2, 'Asha', 'John', 'ash@gmail.com', 884807676, 'Architect', '2023-12-12', 'Unemployed', '0', 'a.jpg', '2023-08-21 10:33:40'),
-(2, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-23', 'asdf', 'asd', 'asdf', '2023-08-16 18:30:00'),
-(3, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-23', 'asdf', 'asd', 'asdf', '2023-08-16 18:30:00'),
-(4, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-23', 'asdf', 'asd', 'asdf', '2023-08-16 18:30:00'),
-(5, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-23', 'asdf', 'asd', 'asdf', '2023-08-16 18:30:00'),
-(6, 0, 'AS', 'asdf', 'siya@gmail.com', 2147483647, 'asd', '2023-08-10', 'asdf', 'asd', 'des.png', '2023-08-18 05:50:07'),
-(7, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-24', 'asdf', 'asd', 'prestigeshipping_loadkooduthal.sql', '2023-08-18 05:52:37'),
-(8, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-08', 'asdf', 'asd', 'des.png', '2023-08-18 08:50:06'),
-(9, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-08', 'asdf', 'asd', 'des.png', '2023-08-18 08:50:08'),
-(10, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-22', 'asdf', 'asd', 'job_apply.sql', '2023-08-18 08:50:53'),
-(11, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-22', 'asdf', 'asd', 'job_apply.sql', '2023-08-18 08:50:55'),
-(12, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-16', 'asdf', 'asd', 'job_apply.sql', '2023-08-18 08:51:53'),
-(13, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-16', 'asdf', 'asd', 'job_apply.sql', '2023-08-18 08:51:54'),
-(14, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-16', 'asdf', 'asd', 'job_apply.sql', '2023-08-18 08:51:54'),
-(15, 0, 'Arsha', 'asdf', 'aparnabhaasi@gmail.com', 2147483647, 'asd', '2023-08-16', 'asdf', 'asd', 'job_apply.sql', '2023-08-18 08:51:55'),
-(16, 0, '', '', '', 0, '', '0000-00-00', '', '', 'favicon.png', '2023-08-21 05:18:37'),
-(17, 0, '', '', '', 0, '', '0000-00-00', '', '', 'favicon.png', '2023-08-21 05:18:38'),
-(18, 0, '', '', '', 0, '', '0000-00-00', '', '', 'favicon.png', '2023-08-21 05:18:38'),
-(19, 0, '', '', '', 0, '', '0000-00-00', '', '', 'favicon.png', '2023-08-21 05:18:38'),
-(20, 0, '', '', '', 0, '', '0000-00-00', '', '', 'favicon.png', '2023-08-21 05:18:47'),
-(21, 0, '', '', '', 0, '', '0000-00-00', '', '', 'favicon.png', '2023-08-21 05:18:47'),
-(22, 0, '', '', '', 0, '', '0000-00-00', '', '', 'favicon.png', '2023-08-21 05:18:47'),
-(23, 0, '', '', '', 0, '', '0000-00-00', '', '', 'favicon.png', '2023-08-21 05:19:00');
+INSERT INTO `job_apply` (`apply_id`, `c_id`, `fname`, `lname`, `email`, `mobile`, `position`, `start_date`, `status`, `exp`, `resume`, `date`, `qualification`) VALUES
+(30, 7, 'Ashna', 's', 'aparnabhaasi@gmail.com', '08848076776', 'Btech', '1996-06-10', 'Unemployed', '0', 'pdf1.pdf', '2023-08-22 10:30:45', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `team`
+--
+
+CREATE TABLE `team` (
+  `id` int(150) NOT NULL,
+  `image` text NOT NULL,
+  `name` varchar(250) NOT NULL,
+  `designation` varchar(250) NOT NULL,
+  `description` varchar(250) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `team`
+--
+
+INSERT INTO `team` (`id`, `image`, `name`, `designation`, `description`) VALUES
+(3, 'a.jpg', 'John Smith', 'Sr Architect', 'Designing innovative and sustainable solutions.'),
+(4, 'b.jpg', 'Asha ', 'Project manager', 'Overseeing project execution and ensuring seamless coordination.'),
+(5, 'c.jpg', 'Mr. Smith', 'Jr Architect', 'Designing innovative and sustainable solutions.'),
+(6, 'd.jpg', 'Ash S ', 'Project manager', 'Overseeing project execution and ensuring seamless coordination.');
 
 --
 -- Indexes for dumped tables
@@ -239,6 +241,12 @@ ALTER TABLE `job_apply`
   ADD PRIMARY KEY (`apply_id`);
 
 --
+-- Indexes for table `team`
+--
+ALTER TABLE `team`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -270,13 +278,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `career`
 --
 ALTER TABLE `career`
-  MODIFY `c_id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `c_id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `job_apply`
 --
 ALTER TABLE `job_apply`
-  MODIFY `apply_id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `apply_id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `team`
+--
+ALTER TABLE `team`
+  MODIFY `id` int(150) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

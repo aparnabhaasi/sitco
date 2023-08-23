@@ -12,7 +12,10 @@ function Navbars() {
   return (
     <Navbar expand="lg" className="p-4">
       <Container fluid className='nav-container'>
-        <Navbar.Brand href="#home" className='text-white'><strong>SITCO</strong></Navbar.Brand>
+<Navbar.Brand href="#home" className='text-white'>
+  <img src="/Images/sitco-logo.png" alt="Logo" width= "200" />
+</Navbar.Brand>
+
         <Navbar.Toggle aria-controls="basic-navbar-nav">
           <span style={iconStyle}>&#9776;</span>
         </Navbar.Toggle>
