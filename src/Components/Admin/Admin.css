@@ -1,0 +1,206 @@
+/* Admin.css */
+
+/* Styles for the navigation bar */
+.navbar {
+  background-color: rgb(13, 13, 70); /* Set your desired background color */
+  padding: 0px ;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-button {
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  font-size: 18px; /* Adjust the font size as needed */
+  padding: 10px 15px;
+  transition: color 0.3s, background-color 0.3s;
+  border: none; /* Remove the border from all buttons */
+}
+.nav-button:focus {
+  outline: none;
+}
+
+/* Remove border from active button */
+.active-button {
+  border: none !important; /* Important to override any existing border styles */
+}
+
+.active-button,
+.nav-button:hover {
+  color: #00a859; /* Change to your desired text color on hover */
+  padding: 8px 15px;
+}
+
+.table-width {
+  width: 100%;
+  border: 1px solid black; /* Add a black border */
+}
+.table-width tbody tr {
+  border: 1px solid black;
+}
+
+
+
+/* Styles for the components */
+/* Add your component styles here */
+
+
+/* GalleryAdmin.css */
+.custom-table {
+  width: 100%;
+  background-color: #bbbbbb; /* Light gray background */
+}
+
+.custom-table th {
+  background-color: #343a40; /* Dark gray header background */
+  color: #ffffff;
+  height: 40px; /* White text color */
+  width: 100px;
+}
+
+.custom-table tbody tr:nth-child(odd) {
+  background-color: #f8f9fa; /* White background for odd rows */
+}
+
+.custom-table tbody tr:nth-child(even) {
+  background-color: #f8f9fa; /* Light gray background for even rows */
+}
+
+.custom-table tbody tr:hover {
+  background-color: #ebebeb; /* Hover color */
+}
+
+/* JobApplicationCard.css */
+.job-application-card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+  border-radius: 30px;
+  background: #f6f6f6;
+  box-shadow: 10px 10px 20px #dddddd,
+             -15px -15px 20px #ffffff;
+}
+
+.job-application-card h2 {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.applicant-details {
+  font-size: 16px;
+}
+
+.applicant-details p {
+  margin: 8px 0;
+}
+
+/* HeaderAdmin.css */
+
+.header-admin {
+  background-color: #333;
+  color: #fff;
+  padding: 15px 0;
+  position: relative;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-button.active-button {
+  color: #ff5722; /* Active button color */
+}
+
+/* Mobile menu styles */
+
+.mobile-menu-button {
+  display: flex; /* Make the toggle button visible by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 3px 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.mobile-menu-button.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-button.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #333;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1;
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-button {
+    margin: 10px 20px;
+  }
+}
+
+
+
+
+
+

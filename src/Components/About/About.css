@@ -1,0 +1,281 @@
+.aboutCard h4 {
+  color: #31b675;
+}
+.aboutCard h1 {
+  font-size: 35px;
+  font-weight: 300;
+}
+.aboutCard h1 span {
+  font-weight: bold;
+}
+.aboutCard p {
+  margin-top: 20px;
+  font-weight: 300;
+}
+.aboutCard .row1 {
+  padding-right: 30px;
+}
+.aboutCard .row.image,
+.aboutCard .image {
+  position: relative;
+}
+.aboutCard .control-btn button {
+  left: 40%;
+}
+.aboutCard .control-btn i {
+  font-size: 20px;
+}
+.aboutCard .image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 89.5%;
+  height: 44vh;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+}
+.aboutCard .image::before {
+  content: "";
+  position: absolute;
+  bottom: 5%;
+  left: 10%;
+  /* background-color: rgba(0, 0, 0, 0.7); */
+  width: 70%;
+  height: 0px;
+  border-radius: 5px;
+  z-index: -1;
+}
+.aboutCard .control-btn::before {
+  content: "";
+  position: absolute;
+  bottom: 2%;
+  left: 15%;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  width: 60%;
+  height: 30px;
+  border-radius: 5px;
+  z-index: -1;
+}
+.features .flex_space {
+  flex-direction: row-reverse;
+}
+.features img {
+  width: 90%;
+}
+.features .control-btn,
+.features .image::after,
+.features .image::before,
+.features .control-btn::before {
+  display: none;
+}
+.features h1 {
+  font-weight: bold;
+}
+.features h1 span {
+  color: #31b675;
+}
+@media screen and (max-width: 768px) {
+  .features .flex_space,
+  .aboutCard {
+    flex-direction: column;
+  }
+  .aboutCard .image::after,
+  .aboutCard .image::before,
+  .aboutCard .control-btn::before {
+    display: none;
+  }
+  .aboutCard .row {
+    width: 100%;
+  }
+  .aboutCard .image {
+    margin-top: 50px;
+  }
+  .aboutCard img {
+    width: 100%;
+  }
+}
+
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+.theme-text {
+  color: #474af0;
+}
+
+.card-img-top {
+  padding: 100px;
+  width: 100%;
+}
+.card {
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+.card:hover {
+  color: white;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0%;
+  background: #31b67652;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: -1;
+}
+.card:hover::before {
+  left: 0%;
+  color: white;
+}
+.container-fluid {
+  background-image: url("");
+  background-position: center;
+  background-size: cover;
+}
+
+
+.who-we{
+  background: #31b6764f;
+}
+.t{
+  font-size: 20px;
+}
+
+
+
+
+
+/* ------------------------- */
+
+
+.container {
+  width: 1200px !important;
+  padding: 0 !important;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media screen and (min-width: 992px) and (max-width: 1439px) {
+    max-width: 1279px !important;
+    padding: 0 !important;
+    margin: 0 80px !important;
+    width: auto !important;
+  }
+
+  @media screen and (max-width: 991px) {
+    max-width: 959px !important;
+    margin: 0 16px !important;
+    padding: 0 !important;
+    width: auto !important;
+  }
+}
+
+.gradient-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  padding: 30px;
+  @media screen and (max-width: 991px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container-title {
+  text-align: center;
+  padding: 0 !important;
+  margin-bottom: 40px;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.card {
+  max-width: 550px;
+  border: 0;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.container-card {
+  position: relative;
+  border: 2px solid transparent;
+  /* background: linear-gradient(71deg, #080509, #1a171c, #080509); */
+  background-clip: padding-box;
+  border-radius: 45px;
+  padding: 40px;
+  img {
+    margin-bottom: 32px;
+  }
+}
+
+.bg-green-box,
+.bg-white-box,
+.bg-yellow-box,
+.bg-blue-box {
+  position: relative;
+}
+
+.bg-green-box::after,
+.bg-white-box::after,
+.bg-yellow-box::after,
+.bg-blue-box::after {
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  content: "";
+  z-index: -1;
+  border-radius: 45px;
+}
+
+.bg-green-box::after {
+  background: linear-gradient(71deg, #0d1212, #3da077, #0d1212);
+}
+
+.bg-white-box::after {
+  background: linear-gradient(71deg, #121013, #b0afb0, #121013);
+}
+
+.bg-yellow-box::after {
+  background: linear-gradient(71deg, #110e0e, #afa220, #110e0e);
+}
+
+.bg-blue-box::after {
+  background: linear-gradient(71deg, #0c0a0e, #5f6fad, #0c0a0e);
+}
+
+.card-title {
+  font-weight: 600;
+  color: white;
+  letter-spacing: -0.02em;
+  line-height: 40px;
+  font-style: normal;
+  font-size: 28px;
+  padding-bottom: 8px;
+}
+
+.card-description {
+  font-weight: 600;
+  line-height: 32px;
+  color: hsla(0, 0%, 100%, 0.5);
+  font-size: 16px;
+  max-width: 470px;
+}
+
+.getin{
+  font-size: 25px;
+  color: #868686;
+}
+.brd{
+  border-style: double;
+}

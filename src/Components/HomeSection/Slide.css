@@ -1,0 +1,49 @@
+  .slide-content {
+    position: relative;
+  }
+
+  .slide-content img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%; /* Ensure image doesn't exceed container width */
+  }
+
+  .slide-content h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.067);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 34px; /* Default font size */
+
+    /* Animation */
+    animation: fadeInUp 1s ease-out;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate(-50%, 30%);
+    }
+    to {
+      opacity: 1;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  /* Media queries for adjusting font size */
+  @media (max-width: 768px) {
+    .slide-content h1 {
+      font-size: 18px; /* Reduce font size for mobile view */
+    }
+  }
+
+  @media (min-width: 769px) {
+    .slide-content h1 {
+      font-size: 52px; /* Increase font size for desktop view */
+    }
+  }
