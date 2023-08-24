@@ -5,8 +5,8 @@ import { Link } from "react-router-dom"
 const AboutCard = () => {
   return (
     <>
-      <div className='aboutCard  flex_space p-5'>
-        <div className='row row1'>
+      <div className='aboutCard  flex_space p-5 '>
+        <div className='row row1 '>
           <h4>About Us</h4>
           <h1>
             Building <span>the Future of Kerala</span>'s Infrastructure

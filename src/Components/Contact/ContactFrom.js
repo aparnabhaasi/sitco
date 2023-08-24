@@ -79,7 +79,6 @@ const ContactFrom = () => {
           </div>
 
           <div className='side-content'>
-            <h5>For any inquiries regarding career opportunities or the application process, feel free to reach out to our HR department at [HR Email Address] or [Phone Number].</h5>
             {/* <p>Lorem ipsum dolor sit amet consectetur adipiscing elit amet consectetur.</p> */}
             <br />
 

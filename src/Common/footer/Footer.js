@@ -24,7 +24,7 @@ const Footer = () => {
             </div> 
   
             <div className=' col-md-4 col-sm-12 col-lg-4 p-4'>
-              <h2>NAVIGATION</h2>
+              <h2>USEFUL LINKS</h2>
               <ul>
                 <li>
                   <Link to='/'>Home</Link>
@@ -63,12 +63,12 @@ const Footer = () => {
                 <li>
                   <span className="footer-text"><i class="fa-solid fa-phone"></i>+91 484 4011300</span><br/>
                   <span className="footer-text">&nbsp;+91 9846581300</span><br/>
-                  <span className="footer-text">&nbsp;+91 9447081300</span>
+                  <span className="footer-text">&nbsp;+91 9447081300</span><br/>
                   <span className="footer-text">&nbsp;+91 484 2681167</span>
 
                 </li><br/>
                 <li>
-                  <span className="footer-text"><i class="fa-solid fa-envelope"></i>sitcoassociates@gmail.com</span>
+                  <span className="footer-text"><i class="fa-solid fa-envelope"></i> sitcoassociates@gmail.com</span>
                 </li>
 
                 
