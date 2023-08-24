@@ -32,7 +32,7 @@ function Register() {
     formData.append('career_id', careerId); // Send the career ID with the form data
 
     try {
-      const response = await axios.post("http://localhost:80/sitco/PHP/job.php/save", formData, {
+      const response = await axios.post("PHP/job.php/save", formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 

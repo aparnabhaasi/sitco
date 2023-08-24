@@ -14,7 +14,7 @@ const GalleryAdmin = () => {
 
   function getUsers() {
     axios
-      .get("http://localhost:80/sitco/PHP/career.php/gallery/")
+      .get("PHP/career.php/gallery/")
       .then(function (response) {
         console.log("API response:", response.data);
         if (Array.isArray(response.data)) {
@@ -40,7 +40,7 @@ const GalleryAdmin = () => {
     console.log("Deleting user with ID:", userId);
     if (window.confirm("Are you sure you want to delete this image?")) {
       axios
-        .delete(`http://localhost:80/sitco/PHP/admin_delete_jobs.php?id=${userId}`)
+        .delete(`PHP/admin_delete_jobs.php?id=${userId}`)
         .then(function (response) {
           console.log(response.data);
           if (response.data.success) {

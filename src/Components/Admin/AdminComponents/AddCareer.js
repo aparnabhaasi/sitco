@@ -32,7 +32,7 @@ const AddCareer = ({ show, handleClose }) => {
     }
 
     axios
-      .post('http://localhost/sitco/PHP/add_career.php', form, {
+      .post('PHP/add_career.php', form, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },
@@ -138,7 +138,7 @@ const AddCareer = ({ show, handleClose }) => {
           <Button variant="outline-secondary" onClick={handleClose}>
             Close
           </Button>
-          <Button variant="outline-success" type="submit">
+          <Button variant="outline-success" type="submit" className=''>
             Post New Job
           </Button>
         </Form>

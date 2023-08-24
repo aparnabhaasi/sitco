@@ -15,7 +15,7 @@ function Gallery() {
 
   function getUsers() {
     axios
-      .get("http://localhost:80/sitco/PHP/index.php/gallery/")
+      .get("PHP/index.php/gallery/")
       .then(function (response) {
         console.log("API response:", response.data);
         if (Array.isArray(response.data)) {
@@ -36,7 +36,7 @@ function Gallery() {
       <section className="gallery top">
         <div className="container grid">
           {users.map((user, index) => (
-            <Cards key={index} image={`http://localhost:80/sitco/public/Images/gallery/${user.image}`}  title={user.title} />
+            <Cards key={index} image={`Images/gallery/${user.image}`}  title={user.title} />
           ))}
         </div>
       </section>

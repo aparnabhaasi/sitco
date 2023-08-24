@@ -31,7 +31,7 @@ const GalleryAdmin = () => {
   const handleDeleteClick = (userId) => {
     if (window.confirm("Are you sure you want to delete this image?")) {
       axios
-        .delete(`http://localhost:80/sitco/PHP/update_project.php?id=${userId}`)
+        .delete(`PHP/update_project.php?id=${userId}`)
         .then(function (response) {
           console.log(response.data);
           if (response.data.success) {
@@ -53,7 +53,7 @@ const GalleryAdmin = () => {
 
   function getUsers() {
     axios
-    .get("http://localhost:80/backup/PHP/project.php/projects/")
+    .get("PHP/project.php/projects/")
       .then(function (response) {
         console.log("API response:", response.data);
       
@@ -93,7 +93,7 @@ const GalleryAdmin = () => {
             <tr key="">
               <td style={{ textAlign: 'center', verticalAlign: 'middle' }}>{user.id}</td>
               <td style={{ textAlign: 'center', verticalAlign: 'middle' }}>
-              <img src={`http://localhost:80/sitco/public/Images/project/${user.image}`} alt="" width="200" />
+              <img src={`Images/project/${user.image}`} alt="" width="200" />
               </td>
               <td style={{ textAlign: 'center', verticalAlign: 'middle' }}>{user.title}</td>
               <td style={{ textAlign: 'center', verticalAlign: 'middle' }}>

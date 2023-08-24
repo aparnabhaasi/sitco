@@ -23,7 +23,7 @@ const CareerAdmin = (props) => {
 
   function getUsers() {
     axios
-      .get("http://localhost:80/sitco/PHP/view_application.php/projects/")
+      .get("PHP/view_application.php/projects/")
       .then(function (response) {
         console.log("API response:", response.data);
         if (Array.isArray(response.data)) {
@@ -39,7 +39,7 @@ const CareerAdmin = (props) => {
 
   const downloadResume = (resumeId, resumeFileName) => {
     axios
-      .get(`http://localhost:80/sitco/PHP/download_resume.php?id=${resumeId}`, {
+      .get(`PHP/download_resume.php?id=${resumeId}`, {
         responseType: 'blob', // Receive binary data as a blob
       })
       .then((response) => {
@@ -79,8 +79,8 @@ const CareerAdmin = (props) => {
       
       {users.map((user, index) => (
         <div className='container ' key={user.id}>
-          <div className='col-md-6 col-sm-12 col-lg-6'>
-            <div className="job-application-card p-5 " >
+          <div className='col-md-6 col-sm-12 col-lg-6 bg-dark'>
+            <div className="job-application-card p-5 bg-dark" >
               <div className='text-center'><h2>{user.title}</h2></div><hr />
               <div className="applicant-details">
                 <p>
@@ -103,7 +103,7 @@ const CareerAdmin = (props) => {
                 </p>
                 <hr />
                 <div className='text-center'>
-                  <Button variant="outline-dark" onClick={() => downloadResume(user.resumeId, user.resume)}>Download Resume <i className="fa-regular fa-eye"></i></Button>
+                  <Button variant="outline-light" onClick={() => downloadResume(user.resumeId, user.resume)}>Download Resume <i className="fa-regular fa-eye"></i></Button>
                 </div>
                 <hr />
                 <div className='text-center mt-4'>

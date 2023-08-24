@@ -20,7 +20,7 @@ const AboutCard = () => {
           </Link>
         </div>
         <div className='row image'>
-          <img src='/images/about.jpg' alt='' />
+          <img src='/Images/about.jpg' alt='' />
           <div className='control-btn'>
             
           </div>

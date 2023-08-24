@@ -15,7 +15,7 @@ function Projects() {
 
   function getUsers() {
     axios
-      .get("http://localhost:80/sitco/PHP/project.php/projects/")
+      .get("PHP/project.php/projects/")
       .then(function (response) {
         console.log("API response:", response.data);
         if (Array.isArray(response.data)) {
@@ -36,7 +36,7 @@ function Projects() {
       <section className="gallery top">
         <div className="container grid">
           {project.map((user, index) => (
-            <Cards key={index} image={`http://localhost:80/sitco/public/Images/project/${user.image}`}  title={user.title} />
+            <Cards key={index} image={`Images/project/${user.image}`}  title={user.title} />
           ))}
         </div>
       </section>

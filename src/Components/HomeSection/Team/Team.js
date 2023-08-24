@@ -11,7 +11,7 @@ function Team() {
   
     function getUsers() {
       axios
-        .get("http://localhost:80/sitco/PHP/admin_view_team.php/gallery/")
+        .get("PHP/admin_view_team.php/gallery/")
         .then(function (response) {
           console.log("API response:", response.data);
           if (Array.isArray(response.data)) {
@@ -43,7 +43,7 @@ function Team() {
                     <div class="box-top">
                    
               
-                        <img class="box-image" src={`http://localhost:80/sitco/public/Images/team/${user.image}`}  alt="profile" />
+                        <img class="box-image" src={`Images/team/${user.image}`}  alt="profile" />
                         
                         <div class="title-flex">
                        

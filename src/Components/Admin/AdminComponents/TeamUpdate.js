@@ -35,7 +35,7 @@ const GalleryUpdate = ({ show, handleClose, imageId, currentName,currentDes,curr
     }
 
     try {
-      const response = await fetch('http://localhost:80/sitco/PHP/update_team.php', {
+      const response = await fetch('PHP/update_team.php', {
         method: 'POST',
         body: formData,
       });

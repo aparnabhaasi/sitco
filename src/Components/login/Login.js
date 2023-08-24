@@ -22,7 +22,7 @@ function Login(props) {
 
     if (user !== '' && pass !== '') {
       
-      fetch('http://localhost/sitco/PHP/login.php', {
+      fetch('PHP/login.php', {
         method: 'POST',
         headers: {
           Accept: 'application/json',

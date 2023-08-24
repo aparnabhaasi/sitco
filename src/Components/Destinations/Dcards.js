@@ -12,7 +12,7 @@ const Cards = ({ item: { id, image, title, sidepara, desc, paraImage_one, paraIm
 
   function getUsers() {
     axios
-      .get("http://localhost:80/sitco/PHP/project.php/projects/")
+      .get("PHP/project.php/projects/")
       .then(function (response) {
         console.log("API response:", response.data);
         if (Array.isArray(response.data)) {
@@ -30,7 +30,7 @@ const Cards = ({ item: { id, image, title, sidepara, desc, paraImage_one, paraIm
      {project.map((user, index) => (
       <div className='items'>
         <div className='img'>
-          <img src={`http://localhost:80/sitco/public/Images/project/${user.image}`}  alt='Gallery Image' />
+          <img src={`Images/project/${user.image}`}  alt='Gallery Image' />
 
           <Link to="project" className='blogItem-link'>
             <i className='fas fa-external-link-alt'></i>

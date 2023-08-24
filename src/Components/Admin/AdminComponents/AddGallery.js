@@ -15,7 +15,7 @@ const AddGallery = ({ show, handleClose }) => {
       formData.append('title', title);
       formData.append('file', file);
 
-      const response = await axios.post("http://localhost:80/sitco/PHP/admin_add_gallery.php", formData, {
+      const response = await axios.post("PHP/admin_add_gallery.php", formData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
 

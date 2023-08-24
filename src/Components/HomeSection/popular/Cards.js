@@ -55,7 +55,7 @@ const Cards = () => {
 
   function getUsers() {
     axios
-      .get("http://localhost:80/sitco/PHP/index.php/gallery/")
+      .get("PHP/index.php/gallery/")
       .then(function (response) {
         console.log("API response:", response.data);
         if (Array.isArray(response.data)) {
@@ -78,7 +78,7 @@ const Cards = () => {
               <div className='cards'>
                 <div className='item'>
                   <div className='imgae'>
-                    <img src={`http://localhost:80/sitco/public/Images/gallery/${user.image}`}  alt='' />
+                    <img src={`Images/gallery/${user.image}`}  alt='' />
                    
                   </div>
                 

@@ -62,8 +62,37 @@
     grid-template-columns: repeat(1, 1fr);
   }
 }
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Wrap cards to the next line when they exceed container width */
+  justify-content: center; /* Center cards horizontally */
+  gap: 20px; /* Add some spacing between cards */
+}
+.career-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
 
 
+
+
+
+/* Testimonial.css */
+.card-container {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: center; /* Horizontal center alignment */
+  align-items: center; /* Vertical center alignment */
+  text-align: center; /* Center-align the text within each card */
+}
+
+/* Add any other styling you need for your cards here */
+.box {
+  /* Your card styles */
+  margin: 30px; /* Add margin for spacing between cards */
+}
 
 
 

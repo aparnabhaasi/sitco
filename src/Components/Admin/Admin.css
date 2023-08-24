@@ -88,8 +88,8 @@
   margin: 16px;
   border-radius: 30px;
   background: #f6f6f6;
-  box-shadow: 10px 10px 20px #dddddd,
-             -15px -15px 20px #ffffff;
+  /* box-shadow: 10px 10px 20px #dddddd, */
+             /* -15px -15px 20px #ffffff; */
 }
 
 .job-application-card h2 {
